@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  go:
+    container_name: go
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - GO_ENV=docker
+    volumes:
+      - .:/go/src/github.com/dongri/web-app-on-docker/go
+    logging:
+      options:
+        max-size: "500k"
+    ports:
+      - "127.0.0.1:50001:3001"
