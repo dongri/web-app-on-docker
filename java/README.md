@@ -29,3 +29,8 @@ $ gradle war
 $ javac -version
 javac 10.0.2
 ```
+
+# url
+```
+$ open http://localhost:50001/java/HelloServlet
+```
