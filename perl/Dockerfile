@@ -1,4 +1,6 @@
 FROM nginx:latest
+LABEL maintainer "Dongri Jin <dongrify@gmail.com>"
+
 RUN apt-get clean && apt-get update && apt-get install -y nano spawn-fcgi fcgiwrap wget curl
 
 RUN sed -i 's/www-data/nginx/g' /etc/init.d/fcgiwrap

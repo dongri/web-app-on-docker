@@ -1,4 +1,5 @@
 FROM python:3.7.2-alpine3.9
+LABEL maintainer "Dongri Jin <dongrify@gmail.com>"
 
 RUN pip3 install flask
 
