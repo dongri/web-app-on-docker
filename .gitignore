@@ -2,3 +2,7 @@ node_modules
 go/go
 
 __pycache__/
+
+.gradle
+
+bin

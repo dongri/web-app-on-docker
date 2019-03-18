@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  jetty:
+    container_name: jetty
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./build/libs:/var/lib/jetty/webapps
+    logging:
+      options:
+        max-size: "500k"
+    ports:
+      - "50001:8080"
