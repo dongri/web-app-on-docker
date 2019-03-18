@@ -1,2 +1,4 @@
 node_modules
 go/go
+
+__pycache__/
