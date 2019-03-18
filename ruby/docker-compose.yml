@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  ruby:
+    container_name: ruby
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - RACK_ENV=production
+    volumes:
+      - .:/src
+    logging:
+      options:
+        max-size: "500k"
+    ports:
+      - "50001:3000"
