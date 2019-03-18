@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  perl:
+    container_name: perl
+    build:
+      context: .        
+    volumes:
+      - ./src:/var/www
+      - ./log:/var/log
+    ports:
+      - "50001:80"
