@@ -4,5 +4,5 @@ import Web.Scotty
 import Data.Monoid (mconcat)
 
 main = scotty 3000 $ do
-    get "/" $ do
-        html $ mconcat ["<h1>hello haskell</h1>"]
+  get "/" $ do
+    html $ mconcat ["hello haskell"]
