@@ -6,7 +6,6 @@ services:
     build:
       context: .        
     volumes:
-      - ./src:/var/www
-      - ./log:/var/log
+      - ./src:/src
     ports:
-      - "50001:80"
+      - "50001:3000"

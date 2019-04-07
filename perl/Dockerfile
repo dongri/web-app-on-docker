@@ -1,13 +1,8 @@
-FROM nginx:latest
+FROM perl:5.28.1
 LABEL maintainer "Dongri Jin <dongrify@gmail.com>"
 
-RUN apt-get clean && apt-get update && apt-get install -y nano spawn-fcgi fcgiwrap wget curl
+RUN cpan Mojolicious
 
-RUN sed -i 's/www-data/nginx/g' /etc/init.d/fcgiwrap
-RUN chown nginx:nginx /etc/init.d/fcgiwrap
-ADD ./vhost.conf /etc/nginx/conf.d/default.conf
+WORKDIR /src
 
-WORKDIR /var/www
-
-CMD /etc/init.d/fcgiwrap start \
-  && nginx -g 'daemon off;'
+CMD ["morbo","web.pl"]
