@@ -3,6 +3,7 @@ LABEL maintainer "Dongri Jin <dongrify@gmail.com>"
 
 ENV APP_ROOT /src
 ADD . $APP_ROOT
+RUN cd $APP_ROOT
 WORKDIR $APP_ROOT/web
 
 RUN stack setup
