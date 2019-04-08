@@ -1,8 +1,8 @@
-FROM fpco/stack-build
+FROM haskell:8.6.3
 LABEL maintainer "Dongri Jin <dongrify@gmail.com>"
 
 ENV APP_ROOT /src
-COPY . $APP_ROOT
+ADD . $APP_ROOT
 WORKDIR $APP_ROOT/web
 
 RUN stack setup
