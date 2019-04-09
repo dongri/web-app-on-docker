@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/src
+      - .:/root/src
     logging:
       options:
         max-size: "500k"
